@@ -1,0 +1,15 @@
+<h3>Top People</h3>
+
+<div>
+  <a *ngFor="let person of people"
+     routerLink="/details/{{ person.id }}">
+    <div>
+      <h4>
+        {{ person.name | uppercase }}
+      </h4>
+    </div>
+  </a>
+</div>
+
+<app-people-search></app-people-search>
+

@@ -1,0 +1,25 @@
+<h2>People List</h2>
+<div>
+  <label> First Name:
+    <input #firstName />
+  </label>
+  <label> Last Name:
+    <input #lastName />
+  </label>
+  <button (click)="add(firstName.value, lastName.value); firstName.value=''; lastName.value=''">
+    add
+  </button>
+</div>
+<ul>
+  <li *ngFor="let person of people">
+    <a routerLink="/details/{{ person.id }}">
+      <span > {{ person.id }}</span>
+      {{ person.firstName | uppercase }} {{ person.lastName | uppercase }}
+    </a>
+    <button class="delete" title="delete-person"
+            (click)="delete(person)">X</button>
+  </li>
+</ul>
+
+
+
