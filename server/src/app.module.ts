@@ -9,10 +9,10 @@ import {Person} from "./people/person.entity";
 @Module({
   imports: [
       TypeOrmModule.forRoot({
-        type: "postgres",
+        type: 'postgres',
         host: 'localhost',
         port: 5432,
-        username: 'dev_user',
+        username: 'jengel',
         password: 'Jpe 073 073 85!!',
         database: 'hr',
         entities: [Person],

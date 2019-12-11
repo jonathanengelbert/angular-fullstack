@@ -1,7 +1,6 @@
 import { Controller, Get, Post, Put, Delete, Body, Param, Query } from '@nestjs/common';
-import { PeopleService } from "./people.service";
-import { Person } from "./person.entity";
-import { TypeOrmModule} from "@nestjs/typeorm";
+import { PeopleService } from './people.service';
+import { Person } from './person.entity';
 
 @Controller('people')
 export class PeopleController {
@@ -18,7 +17,6 @@ export class PeopleController {
         console.log(`Updated ${personData.id}`);
         return this.peopleService.findOne(personData);
     }
-
 
     @Get('firstName')
     async findByFirstName(@Query('firstName')firstName, @Body() personData: Person): Promise<any> {
