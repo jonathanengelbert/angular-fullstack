@@ -27,7 +27,7 @@ export class PeopleComponent implements OnInit {
 
   add(firstName: string, lastName: string): void {
     // name = name.trim();
-    if(!firstName || !lastName) { return; }
+    if (!firstName || !lastName) { return; }
 
     this.personService.addPerson({ firstName, lastName } as Person)
       .subscribe(person => {

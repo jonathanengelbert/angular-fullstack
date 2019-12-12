@@ -3,10 +3,10 @@ import {Observable, Subject} from "rxjs";
 
 import {
   debounceTime, distinctUntilChanged, switchMap
-} from "rxjs/operators";
+} from 'rxjs/operators';
 
 import {Person} from '../person';
-import {PersonService} from "../person.service";
+import {PersonService} from '../person.service';
 
 @Component({
   selector: 'app-people-search',
@@ -31,6 +31,6 @@ export class PeopleSearchComponent implements OnInit {
         debounceTime(300),
         distinctUntilChanged(),
         switchMap((term: string) => this.personService.searchPeople(term)),
-      )
+      );
   }
 }
